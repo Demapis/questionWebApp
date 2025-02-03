@@ -1,0 +1,86 @@
+{% extends 'questionwebapp/base.html' %} 
+{% load static %}
+{% block title %} Homepage Homepage 
+{% endblock %} {% block content %} 
+<link rel="stylesheet" href="{% static 'css/questionwebapp/homepage.css' %}">
+
+<div class="welcome">
+    <h1>Welcome to our Question platform</h1>
+    <p>Test your knowledge, challenge yourself and grow with us!</p>
+</div>
+<hr>
+    <div class="search">
+      <input
+        type="search"
+        id="search_bar"
+        name="search_bar"
+        placeholder="search..."
+      />
+    </div>
+    <div class="Welcome_message">
+    <div name="message">
+        <p name="wel_message">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
+            cumque at ipsum quidem distinctio consectetur, odit deleniti quibusdam
+            et placeat hic unde, nam vel repudiandae dolor! Sunt veritatis officiis
+            beatae.
+        </p>
+
+    </div>
+       
+      <hr>
+      <div class="sign_up">
+        <button type="submit">sign_up</button>
+      </div>
+    </div>
+
+    <h2>Quick preview</h2>
+
+    <div class="preview">
+      
+      <div class="preview1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi hic
+        quaerat voluptates vel excepturi esse vitae, dignissimos odio deserunt
+        nesciunt consequatur eos perferendis quia voluptatum, maiores, commodi
+        ullam aut dolores!
+      </div>
+      <div class="preview2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti minus
+        necessitatibus porro earum adipisci rerum itaque aperiam quo perferendis
+        obcaecati minima eius maiores neque quia, facilis illo ratione
+        consectetur quis.
+      </div>
+      <div class="preview3">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est deleniti
+        nesciunt rem quia veniam nostrum repudiandae veritatis, error numquam
+        eligendi voluptatibus nisi impedit fugit consequuntur vel laudantium!
+        Voluptatem, facere explicabo.
+      </div>
+    </div>
+
+    
+    <div class="exerminers">
+        <div name="note">
+            <p>here are some of our exerminers</p>
+        </div>
+
+      <div class="exerminer1">
+        <div class="person1_img">
+          <img src="" alt="person 1 image" />
+        </div>
+      </div>
+
+      <div class="exerminer2">
+        <div class="person2_img">
+          <img src="" alt="person 3 image" />
+        </div>
+      </div>
+
+      <div class="exerminer1">
+        <div class="person3_img">
+          <img src="" alt="person 3 image" />
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

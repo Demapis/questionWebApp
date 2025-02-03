@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/questionwebapp/base.css' %}">
+    
+
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <h2 class="logo">Question App</h2>
+        <ul>
+          <li><a href="{% url 'homepage' %}">homepage</a></li>
+          <li><a href="{% url 'contact' %}">contact</a></li>
+          <li><a href="{% url 'about' %}">about</a></li>
+          <li><a href="{% url 'blog' %}">blog</a></li>
+          <li><a href="{% url 'authentication:register' %}">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content%}{% endblock %}
+    <footer>
+      <h1>a random shit ata ka n footer</h1>
+    </footer>
+  </body>
+</html>
