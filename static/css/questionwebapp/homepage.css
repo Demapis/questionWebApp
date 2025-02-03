@@ -121,13 +121,13 @@ input {
   padding: 20px;
 }
 
-.sign_up btn {
+.sign_up .btn {
   font-size: 4px;
   color: red;
 
 }
 
-h2 {
+.quick-preview {
   align-items: center;
   margin: 2px;
   padding-left: 50%;
