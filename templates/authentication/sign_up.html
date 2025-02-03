@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Register</h1>
-</body>
-</html>
+{% extends 'questionwebapp/base.html' %} 
+{% load static %}
+{% block title %} sign_up{% endblock %} 
+{% block content %}
+<form action="">
+    <fieldset>
+        <label for="first-name">First name: <input type="text" id="first_name"></label>
+        <label for="last-name">Last name: <input type="text" id="last-name"></label>
+        <label for="email">Email: <input type="email" id="email"></label>
+        <label for="password">password: <input type="password"></label>
+        <legend>enter your details here to register</legend>
+    </fieldset>
+</form>
+ {% endblock %}
