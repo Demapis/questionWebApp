@@ -1,4 +1,28 @@
 {% extends 'questionwebapp/base.html' %} {% block title %} Contact 
-{% endblock %} {% block content %} 
+{% endblock %} {% block content %}
 
+<form style="margin-top: 100px">
+  <input type="text" name="full_name" placeholder="Full Name" />
+  <input type="text" name="email" placeholder="Email" />
+  <input type="text" name="about" placeholder="About/Category" />
+  <input type="text" name="description" placeholder="Description" />
+</form>
+
+<!-- Google Map Iframe -->
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.8131151982775!2d34.25608790924787!3d-0.09255023548329534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d55b762206ca17%3A0x6d9244e249defb96!2sJaramogi%20Oginga%20Odinga%20University%20of%20Science%20and%20Technology!5e0!3m2!1sen!2ske!4v1738749230569!5m2!1sen!2ske"
+  width="600"
+  height="450"
+  style="border: 0"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+></iframe>
+
+<div class="owner_details">
+  <h3>Contact Us</h3>
+  <p>Phone</p>
+  <p>Email</p>
+  <p>address</p>
+</div>
 {% endblock %}
