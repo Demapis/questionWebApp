@@ -42,7 +42,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
+.navbar-logo a{
+  color: inherit;
+  text-decoration: none;
+}
 .menu-toggle {
   display: none;
   flex-direction: column;
