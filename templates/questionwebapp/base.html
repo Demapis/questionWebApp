@@ -9,22 +9,44 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="navbar-logo"><a href="{% url 'homepage' %}">Question App</a></div>
+      <div class="navbar-logo">
+        <a href="{% url 'homepage' %}">Question App</a>
+      </div>
 
       <div class="menu-toggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
+      <style>
+        .desktop-nav ul li.active a {
+          color: #38bdf8;
+          font-weight: 800;
+        }
+        .mobile-menu-nav a.active {
+          color: #6d28d9;
+        }
+      </style>
 
       <nav class="desktop-nav">
         <ul>
-         
-          <li><a href="{% url 'about' %}">about</a></li>
-          <li><a href="{% url 'blog' %}">blog</a></li>
-          <li><a href="{% url 'contact' %}">contact</a></li>
-          <li><a href="{% url 'services' %}">Services</a></li>
-          <li><a href="{% url 'authentication:register' %}">register</a></li>
+          <li class="{% if '/about' in request.path %}active{% endif %}">
+            <a href="{% url 'about' %}">about</a>
+          </li>
+          <li class="{% if '/blog' in request.path %}active{% endif %}">
+            <a href="{% url 'blog' %}">blog</a>
+          </li>
+          <li class="{% if '/contact' in request.path %}active{% endif %}">
+            <a href="{% url 'contact' %}">contact</a>
+          </li>
+          <li class="{% if '/services' in request.path %}active{% endif %}">
+            <a href="{% url 'services' %}">Services</a>
+          </li>
+          <li
+            class="{% if '/authentication/register' in request.path %}active{% endif %}"
+          >
+            <a href="{% url 'authentication:register' %}">register</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -36,12 +58,36 @@
         </button>
       </div>
       <nav class="mobile-menu-nav">
-        <a href="{% url 'homepage' %}">homepage</a>
-        <a href="{% url 'about' %}">about</a>
-        <a href="{% url 'blog' %}">blog</a>
-        <a href="{% url 'contact' %}">contact</a>
-        <a href="{% url 'services' %}">Services</a>
-        <a href="{% url 'authentication:register' %}">register</a>
+        <a
+          href="{% url 'homepage' %}"
+          class="{% if request.path == '/' %}active{% endif %}"
+          >homepage</a
+        >
+        <a
+          href="{% url 'about' %}"
+          class="{% if request.path == '/about/' %}active{% endif %}"
+          >about</a
+        >
+        <a
+          href="{% url 'blog' %}"
+          class="{% if request.path == '/blog/' %}active{% endif %}"
+          >blog</a
+        >
+        <a
+          href="{% url 'contact' %}"
+          class="{% if request.path == '/contact/' %}active{% endif %}"
+          >contact</a
+        >
+        <a
+          href="{% url 'services' %}"
+          class="{% if request.path == '/services/' %}active{% endif %}"
+          >Services</a
+        >
+        <a
+          href="{% url 'authentication:register' %}"
+          class="{% if request.path == '/authentication/register/' %}active{% endif %}"
+          >register</a
+        >
       </nav>
     </div>
     <script>
@@ -83,7 +129,7 @@
           <ul>
             <li><a href="{% url 'homepage' %}">Home</a></li>
             <li><a href="{% url 'about' %}">About Us</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
             <li><a href="{% url 'contact' %}">Contact</a></li>
           </ul>
         </div>

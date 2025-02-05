@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+  font-style: normal;
 }
 /* Scrollbar */
 body::-webkit-scrollbar {
@@ -275,6 +278,7 @@ footer {
   flex-grow: 1;
   padding: 10px 15px;
   border: none;
+  width: 40%;
   border-radius: 25px 0 0 25px;
   background: rgba(255, 255, 255, 0.2);
   color: white;

@@ -23,23 +23,6 @@
   font-style: normal;
 }
 
-
-/* Media Query for Smaller Screens */
-@media (max-width: 768px) {
-  .welcome {
-    margin-top: 24px;
-    padding: 30px;
-  }
-
-  .welcome h1 {
-    font-size: 2.5rem;
-  }
-
-  .welcome p {
-    font-size: 1.1rem;
-  }
-}
-
 /* Media Query for Mobile Screens */
 @media (max-width: 480px) {
   .welcome {
@@ -247,10 +230,40 @@
   background-color: #d72676;
 }
 
+@media (max-width: 768px) {
+  .welcome {
+    margin-top: 50px;
+    padding: 30px;
+  }
+
+  .welcome h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome p {
+    font-size: 1.1rem;
+  }
+
+  .starter {
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+}
+
 .features {
   text-align: center;
   padding: 50px 20px;
-  background-color: #f9f9f9;
+  background-color: #f9f9f975;
+  /* Softer, balanced contrast */
+}
+
+.features_container {
+  background-color: #f9f9f975;
 }
 
 .features h2 {
@@ -310,9 +323,7 @@
   }
 }
 
-.features_container {
-  background-color: #f9f9f9;
-}
+
 
 .features_container h2 {
   font-size: 2.5rem;
