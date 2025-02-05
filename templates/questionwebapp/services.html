@@ -1,4 +1,189 @@
 {% extends 'questionwebapp/base.html' %} {% block title %} About 
 {% endblock %} {% block content %} 
+<style>
+    /* General styling */
+.service-container {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 1200px;
+}
 
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #f8f9fa;
+  padding: 50px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: #6200ea;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.hero .btn {
+  padding: 15px 30px;
+  background-color: #6200ea;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.hero .btn.primary {
+  background-color: #6200ea;
+}
+
+.hero .btn.primary:hover {
+  background-color: #3700b3;
+}
+
+/* Service Item */
+.service-item {
+  padding: 40px 20px;
+  margin-top: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.service-item h2 {
+  color: #6200ea;
+}
+
+.service-item ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.service-item li {
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #6200ea;
+  padding: 50px;
+  text-align: center;
+  color: #fff;
+  margin-top: 40px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+}
+
+.cta-section .btn {
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #6200ea;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.cta-section .btn.secondary {
+  background-color: #fff;
+  color: #6200ea;
+}
+
+.cta-section .btn.secondary:hover {
+  background-color: #3700b3;
+  color: #fff;
+}
+
+</style>
+<div class="service-container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Explore Our Services</h1>
+      <p>Take advantage of QuestionApp’s features to create, share, and engage with interactive quizzes.</p>
+      <a href="{% url 'authentication:register' %}" class="btn primary">Get Started</a>
+    </section>
+  
+    <!-- Service 1: Create Questions -->
+    <section class="service-item">
+      <h2>Create Custom Questions</h2>
+      <p>Design personalized quizzes with various types of questions including multiple choice, true/false, and open-ended. Tailor each question to your specific needs, whether it’s for education, fun, or challenges.</p>
+      <ul>
+        <li>Choose from multiple question formats</li>
+        <li>Set time limits for quizzes</li>
+        <li>Include images and multimedia in questions</li>
+        <li>Support for question categorization</li>
+      </ul>
+    </section>
+  
+    <!-- Service 2: Take Quizzes -->
+    <section class="service-item">
+      <h2>Take Quizzes and Test Your Knowledge</h2>
+      <p>Test your knowledge across a wide range of subjects and topics. Whether it’s self-improvement, learning, or friendly competition, QuestionApp has a quiz for everyone.</p>
+      <ul>
+        <li>Access quizzes from various categories</li>
+        <li>Real-time scoring and feedback</li>
+        <li>Challenge yourself with timed quizzes</li>
+      </ul>
+    </section>
+  
+    <!-- Service 3: Leaderboard and Competitions -->
+    <section class="service-item">
+      <h2>Leaderboard & Competitions</h2>
+      <p>Compete with your friends or others on the platform! Track your performance on the leaderboard, compare your scores, and see how you rank among other users.</p>
+      <ul>
+        <li>Real-time leaderboard updates</li>
+        <li>View global or friends’ rankings</li>
+        <li>Compete for top positions in regular challenges</li>
+      </ul>
+    </section>
+  
+    <!-- Service 4: Track Progress with Analytics -->
+    <section class="service-item">
+      <h2>Track Your Learning Progress</h2>
+      <p>Get detailed performance reports to monitor your strengths and areas for improvement. Visual insights help you understand your progress over time.</p>
+      <ul>
+        <li>Comprehensive reports on quiz performance</li>
+        <li>Graphical representation of your scores</li>
+        <li>Analyze your trends and progress</li>
+      </ul>
+    </section>
+  
+    <!-- Service 5: Secure and Private Platform -->
+    <section class="service-item">
+      <h2>Secure & Private</h2>
+      <p>Your privacy is our top priority. All your quiz data, results, and personal information are protected using the latest security protocols.</p>
+      <ul>
+        <li>Data encryption and secure storage</li>
+        <li>Private quizzes with access controls</li>
+        <li>No sharing of personal data without consent</li>
+      </ul>
+    </section>
+  
+    <!-- Service 6: User-Friendly Interface -->
+    <section class="service-item">
+      <h2>Simple & User-Friendly</h2>
+      <p>Our platform is designed with ease of use in mind. Whether you’re creating quizzes or taking them, everything is intuitive and easy to navigate.</p>
+      <ul>
+        <li>Easy-to-use interface for creating and taking quizzes</li>
+        <li>Responsive design for all devices</li>
+        <li>No technical skills required to get started</li>
+      </ul>
+    </section>
+  
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <h2>Ready to Start?</h2>
+      <p>Get started with creating your first quiz, testing your knowledge, or joining a competition today! Don’t miss out on the fun and learning opportunities.</p>
+      <a href="{% url 'authentication:register' %}" class="btn secondary">Get Started</a>
+    </section>
+  </div>
+  
 {% endblock %}
