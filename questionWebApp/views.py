@@ -13,3 +13,5 @@ def about(request):
 def blog(request):
     return render(request,'questionwebapp/blog.html')
 
+def services(request):
+    return render(request,'questionwebapp/services.html')
