@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="navbar">
-      <div class="navbar-logo">Question App</div>
+      <div class="navbar-logo"><a href="{% url 'homepage' %}">Question App</a></div>
 
       <div class="menu-toggle">
         <span></span>
@@ -19,11 +19,12 @@
 
       <nav class="desktop-nav">
         <ul>
-          <li><a href="{% url 'homepage' %}">homepage</a></li>
+         
           <li><a href="{% url 'about' %}">about</a></li>
           <li><a href="{% url 'blog' %}">blog</a></li>
           <li><a href="{% url 'contact' %}">contact</a></li>
           <li><a href="#">Services</a></li>
+          <li><a href="{% url 'authentication:register' %}">register</a></li>
         </ul>
       </nav>
     </header>
@@ -40,6 +41,7 @@
         <a href="{% url 'blog' %}">blog</a>
         <a href="{% url 'contact' %}">contact</a>
         <a href="#">Services</a>
+        <a href="{% url 'authentication:register' %}">register</a>
       </nav>
     </div>
     <script>
