@@ -1,80 +1,148 @@
 {% extends 'questionwebapp/base.html' %} {% load static %} {% block title %}
 QuestionApp | Homepage {% endblock %} {% block content %}
 <link rel="stylesheet" href="{% static 'css/questionwebapp/homepage.css' %}" />
-
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+/>
 <div class="welcome">
   <h1>Welcome to our Question platform</h1>
-  <p>Test your knowledge, challenge yourself and grow with us!</p>
+  <p>Test your knowledge, create your own quizzes, and challenge others!</p>
 </div>
-<hr />
-<div class="search">
-  <input
-    type="search"
-    id="search_bar"
-    name="search_bar"
-    placeholder="search..."
-  />
-</div>
-<div class="Welcome_message">
-  <div name="message">
-    <p name="wel_message">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit
-      cumque at ipsum quidem distinctio consectetur, odit deleniti quibusdam et
-      placeat hic unde, nam vel repudiandae dolor! Sunt veritatis officiis
-      beatae.
-    </p>
+<div class="starter">
+  <div class="search">
+    <input
+      type="text"
+      id="search_bar"
+      name="search_bar"
+      placeholder="search..."
+    />
   </div>
-
-  <hr />
-  <div class="sign_up">
-    <button type="submit">sign_up</button>
-  </div>
-</div>
-
-<h2 class="quick-preview">Quick preview</h2>
-
-<div class="preview">
-  <div class="preview1">
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi hic quaerat
-    voluptates vel excepturi esse vitae, dignissimos odio deserunt nesciunt
-    consequatur eos perferendis quia voluptatum, maiores, commodi ullam aut
-    dolores!
-  </div>
-  <div class="preview2">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti minus
-    necessitatibus porro earum adipisci rerum itaque aperiam quo perferendis
-    obcaecati minima eius maiores neque quia, facilis illo ratione consectetur
-    quis.
-  </div>
-  <div class="preview3">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est deleniti
-    nesciunt rem quia veniam nostrum repudiandae veritatis, error numquam
-    eligendi voluptatibus nisi impedit fugit consequuntur vel laudantium!
-    Voluptatem, facere explicabo.
-  </div>
-</div>
-
-<div class="exerminers">
-  <div name="note">
-    <p>here are some of our exerminers</p>
-  </div>
-
-  <div class="exerminer1">
-    <div class="person1_img">
-      <img src="" alt="person 1 image" />
+  <div class="Welcome_message">
+    <div class="message">
+      <p class="wel_message">
+        Welcome to the Question App! Create your own quizzes, share the link
+        with friends, and challenge others to test their knowledge. Track your
+        progress with detailed results, view interactive graphs, and climb the
+        leaderboard as you compete for the top spot. Ready to start? Let's see
+        who’s the real quiz master!
+      </p>
+    </div>
+    <hr />
+    <div class="sign_up">
+      <a href="{% url 'authentication:register' %}"
+        ><button type="submit">Sign Up</button></a
+      >
     </div>
   </div>
+</div>
 
-  <div class="exerminer2">
-    <div class="person2_img">
-      <img src="" alt="person 3 image" />
+<div class="features_container">
+  <h2>Features</h2>
+  <div class="features">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-trophy"></i>
+        <!-- Example icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Leaderboard</h3>
+        <p>
+          Track your progress and see how you stack up against others with our
+          real-time leaderboard.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-chart-line"></i>
+        <!-- Example icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Results & Graphs</h3>
+        <p>
+          Get detailed results with interactive graphs to help you track your
+          performance over time.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-share-alt"></i>
+        <!-- Example icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Share & Challenge</h3>
+        <p>
+          Create quizzes and share them with friends to challenge their
+          knowledge and compete for the best score.
+        </p>
+      </div>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-laptop"></i>
+        <!-- Simple UI icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Simple UI</h3>
+        <p>
+          Our intuitive, user-friendly interface makes it easy to create, take,
+          and track quizzes with minimal distractions.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-lock"></i>
+        <!-- Secure Database icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Secure Database</h3>
+        <p>
+          Your data is safe with us! We implement top-tier security practices to
+          ensure that your information is always protected.
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-icon">
+        <i class="fas fa-search"></i>
+        <!-- Search Bar icon -->
+      </div>
+      <div class="feature-description">
+        <h3>Search Bar</h3>
+        <p>
+          Easily search for quizzes by title, category, or difficulty to find
+          the perfect quiz for you.
+        </p>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="exerminer1">
-    <div class="person3_img">
-      <img src="" alt="person 3 image" />
-    </div>
+<div class="cta">
+  <h2>Ready to Test Others Knowledge?</h2>
+  <p>Create quizzes, challenge friends, and track your progress. Join now!</p>
+  <div class="cta-buttons">
+    <a href="login.html" class="btn login">Login</a>
+    <a href="{% url 'authentication:register' %}" class="btn register"
+      >Register</a
+    >
   </div>
 </div>
 
