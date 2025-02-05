@@ -1,4 +1,40 @@
-{% extends 'questionwebapp/base.html' %} {% block title %} About 
-{% endblock %} {% block content %} 
+{% extends 'questionwebapp/base.html' %} {% load static %} {% block title %}
+About {% endblock %} {% block content %}
+<link rel="stylesheet" href="{% static 'css/questionwebapp/about.css' %}" />
+<style>
+  .about_header {
+    background-image: url("{% static 'images/Default_Images/about_fallback.jpg' %}");
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    margin-top: 60px;
+    object-fit: cover;
+  }
+  .about_content {
+    width: 55vw;
+    padding: 20px;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100%; */
+  }
+  .about_content h2 {
+  }
+</style>
+
+<div class="about_header">
+  <div class="about_content">
+    <h2>About Us</h2>
+    <p>
+      Welcome to QuestionApp, the ultimate platform for testing knowledge,
+      creating quizzes, and challenging friends. Whether you're a student
+      sharpening your skills, a teacher engaging students, or just someone who
+      loves a good challenge, our platform is designed for you. Whether you want
+      to test your knowledge, challenge friends, or create engaging quizzes,
+      this platform provides all the tools you need to make learning fun and
+      interactive.
+    </p>
+  </div>
+</div>
 
 {% endblock %}
