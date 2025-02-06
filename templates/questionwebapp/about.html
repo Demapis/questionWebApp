@@ -5,6 +5,67 @@ About {% endblock %} {% block content %}
   href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Poppins:wght@600;700&display=swap"
   rel="stylesheet"
 />
+<style>
+  .about_header {
+    background-image: url("{% static 'images/Default_Images/about_fallback.jpg' %}");
+    background-size: 150%;
+    background-position: top center;
+    height: 60vh;
+    margin-top: 60px;
+    position: relative;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+  .about_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.192);
+  }
+
+  .about_content {
+    width: 55vw;
+    padding: 20px;
+  }
+  .about_content h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  /* Paragraph Styling */
+  .about_content p {
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    color: #1b1b1b;
+    line-height: 1.8;
+    font-weight: 800;
+  }
+  @media (max-width: 790px) {
+    .about_header {
+      height: 40vh;
+    }
+
+    .about_content {
+      width: 95vw;
+      padding: 10px;
+    }
+
+    .about_content h2 {
+      font-size: 1.5rem;
+    }
+
+    .about_content p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+</style>
 
 <div class="about_header">
   <div class="about_content">
