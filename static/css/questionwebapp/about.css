@@ -1,1 +1,298 @@
 
+.about_header {
+    background-image: url("{% static 'images/Default_Images/about_fallback.jpg' %}");
+    background-size: 150%;
+    background-position: top center;
+    height: 60vh;
+    margin-top: 60px;
+    position: relative;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+
+  .about_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.192);
+  }
+  .about_content {
+    width: 55vw;
+    padding: 20px;
+  }
+  .about_content h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+
+  /* Paragraph Styling */
+  .about_content p {
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    color: #1b1b1b;
+    line-height: 1.8;
+    font-weight: 800;
+  }
+  @media (max-width: 790px) {
+    .about_header {
+      height: 40vh;
+    }
+
+    .about_content {
+      width: 95vw;
+      padding: 10px;
+    }
+
+    .about_content h2 {
+      font-size: 1.5rem;
+    }
+
+    .about_content p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+  .main_section {
+    /* border: 3px solid red; */
+    display: flex;
+    background-color: rgb(251, 241, 251);
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    width: 100%;
+    height: 250px;
+}
+
+.main_section .section {
+    display: flex;
+    justify-content: space-around; /* Distributes the space between the mission and vision divs */
+    width: 80%; /* Controls the width of the section */
+    height: 100%; /* Ensures the section takes up the full height of the parent div */
+}
+
+.mission, .vision {
+  font-size: 15px;
+    border-radius: 30px;
+    width: 300px;
+    height: 250px;
+    background-color: #d5bcf0;
+    border: 2px solid #803258;
+    box-shadow: 5px 5px 15px rgba(164, 86, 165, 0.3); /* Horizontal, Vertical, Blur Radius, Color */
+    padding-left: 20px;
+    margin-top: 2px;
+    
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+}
+
+ .vision h2 {
+    margin-bottom: 10px;
+    margin-top: -50px;
+}
+.mission h2{
+  margin-bottom: 7px;
+  margin-top: -9px;
+
+}
+
+.main_features_section {
+        /* border: 3px solid red; */
+        align-items: center;
+        justify-content: center;
+        padding: 9px;
+        width: 600px;
+        margin-left: 400px;
+        margin-top: 10px;
+        /* background-color: #803258; */
+      }
+      .features_section {
+        border: 3px solid #803258;
+        box-shadow: 5px 5px 20px rgba(164, 86, 165, 0.3); /* Horizontal, Vertical, Blur Radius, Color */
+        align-items: center;
+        padding-left: 30px;
+        justify-content: center;
+        font-size: 17px;
+        border-radius: 25px;
+        background-color: rgb(254, 208, 215);
+      }
+    .features_section strong, .features_section li {
+      display: block;
+      
+    }
+    .features_section strong {
+      padding-left: 25%;
+      margin-bottom: 3px;
+      margin-top: 3px;
+    }
+    .features_section h2{
+      padding-left:20%;
+    }
+    .another{
+      background-color: rgb(251, 241, 251);
+      margin-top: -5px;
+      border-radius: 20px;
+    }
+    .main_join{
+      width: 100%;
+      /* border: 2px solid black ; */
+      border-radius:20px ;
+      align-items: center;
+      justify-items: center;
+      
+    }
+    .join_us {
+      /* border: 2px solid red ; */
+      border-radius: 20px;
+      padding-left: 7px;
+      background-color: rgb(254, 208, 215);
+      box-shadow: 5px 5px 20px rgba(164, 86, 165, 0.3); /* Horizontal, Vertical, Blur Radius, Color */
+
+    }
+    .join_us h2{
+      padding-left: 50%;
+      color: blue;
+      font-weight: bolder;
+      font-size: 20px;
+      margin-top: 5px;
+      padding-top: 20px;
+      
+      
+    }
+  .join_us p{
+    font-size: 15px;
+  }
+  .join_us .sign_up{
+    padding-left: 50%;
+    /* border: 2px solid black; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+ .sign_up button{
+    
+    background: linear-gradient(90deg, #6D28D9, #EC4899);
+
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 5px;
+  }
+  @keyframes blinking {
+    0% { opacity: 1; } 
+    50% { opacity: 0; } 
+    100% { opacity: 1; }
+}
+
+.blinking {
+    animation: blinking 1s infinite; /* Blinks every 1 second */
+    color: blue;
+}
+
+    @media screen and (max-width: 768px) {
+  .main_section {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px; /* Slightly smaller border radius */
+  }
+
+  .main_section .section {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+
+  .mission,
+  .vision {
+    width: 90%;
+    height: auto; /* Adjust height as needed */
+    margin-bottom: 20px; /* Add space between mission and vision */
+    padding: 15px;  /* Adjust padding */
+    border-radius: 20px; /* Slightly smaller border radius */
+  }
+
+  .mission h2,
+  .vision h2 {
+    margin-top: 0; /* Reset margin-top */
+    font-size: 1.5em; /* Slightly smaller heading */
+  }
+  .mission p,
+  .vision p {
+    font-size: 1em; /* Slightly smaller paragraph font */
+  }
+
+  .another {
+    margin-top: 10px; /* Add some top margin */
+    border-radius: 10px; /* Slightly smaller border radius */
+
+  }
+
+  .main_features_section {
+    width: 90%;
+    margin: 20px auto; /* Center the section */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .features_section {
+    padding: 15px;
+    font-size: 1em;
+    border-radius: 20px; /* Slightly smaller border radius */
+  }
+
+  .features_section h2 {
+    font-size: 1.2em;
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center the heading */
+    margin-bottom: 10px;
+  }
+  .features_section strong, .features_section li {
+    display: block;
+    padding-left: 0; /* Remove left padding */
+    text-align: left; /* Align list items to the left */
+    margin-bottom: 5px;
+  }
+
+  .main_join {
+    padding: 20px;
+    border-radius: 10px; /* Slightly smaller border radius */
+  }
+
+  .join_us {
+    padding: 15px;
+    border-radius: 20px; /* Slightly smaller border radius */
+  }
+
+  .join_us h2 {
+    font-size: 1.4em;
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center the heading */
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+
+  }
+
+  .join_us p {
+    font-size: 1em;
+    text-align: center; /* Center the paragraph */
+  }
+
+  .join_us .sign_up {
+    padding-left: 0; /* Remove left padding */
+    text-align: center; /* Center the button */
+    margin-top: 10px;
+  }
+
+  .sign_up button {
+    font-size: 1.2em;
+    padding: 8px 15px; /* Adjust padding */
+    border-radius: 10px; /* Slightly smaller border radius */
+  }
+}
