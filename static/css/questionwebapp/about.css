@@ -198,6 +198,9 @@ margin-top: -9px;
     text-align: left; /* Align list items to the left */
     margin-bottom: 5px;
   }
+  .features_section strong{
+    font-weight: bold;
+  }
 
   .main_join {
     padding: 20px;
