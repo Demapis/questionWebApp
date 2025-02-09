@@ -24,7 +24,7 @@ urlpatterns = [
     path('blog/', views.blog, name='blog'),
     path('about/', views.about, name='about'),
     path('services/', views.services, name='services'),
-    path('authentication/', include('authentication.urls')),
+    path('authentication/', include('authentication.urls',namespace='authentication')),
     # path('examiner/', include('examiner.urls')),
     # path('question/',include('question.urls')),
     # path('student/', include('student.urls')),
