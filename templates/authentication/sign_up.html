@@ -1,14 +1,95 @@
-{% extends 'questionwebapp/base.html' %} 
-{% load static %}
-{% block title %} sign_up{% endblock %} 
-{% block content %}
-<form action="">
-    <fieldset>
-        <label for="first-name">First name: <input type="text" id="first_name"></label>
-        <label for="last-name">Last name: <input type="text" id="last-name"></label>
-        <label for="email">Email: <input type="email" id="email"></label>
-        <label for="password">password: <input type="password"></label>
-        <legend>enter your details here to register</legend>
-    </fieldset>
+{% extends 'questionwebapp/base.html' %} {% load static %} {% block title %}
+sign_up{% endblock %} {% block content %}
+<style>
+  form {
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: 80px;
+    height: 85vh;
+    border: 2px solid black;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  fieldset {
+    width: auto;
+    display: inline;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: rgb(201, 181, 232);
+    box-shadow: 5px 5px 20px rgba(206, 62, 208, 0.3);
+  }
+  fieldset input {
+    padding: 20px;
+    width: 100%;
+    font-size: 23px;
+    border-radius: 20px;
+    color: aqua;
+    border: 1px solid rgb(15, 18, 191);
+    gap: 3;
+    margin-bottom: 15px;
+  }
+  fieldset input:focus {
+    border: 2px solid blue;
+    outline: none;
+  }
+
+  fieldset legend {
+    font-size: 20px;
+    color: blue;
+    font-weight: bolder;
+  }
+  .register_btn {
+    padding: 10px;
+    align-items: center;
+    display: flex;
+  }
+  .register_btn button {
+    font-size: 30px;
+    color: rgb(89, 206, 30);
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+  }
+</style>
+<form action="" method="POST">
+  {% csrf_token %}
+  <fieldset>
+    <input
+      type="text"
+      id="First_name"
+      placeholder="Enter your first name "
+      name="First_name"
+    />
+    <input
+      type="text"
+      id="Last_name"
+      placeholder="Enter your last name "
+      name="Last_name"
+    />
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Enter your email"
+    />
+    <input
+      type="password"
+      id="create_password"
+      name="create_password"
+      placeholder="Create a new password "
+    />
+    <input
+      type="password"
+      id="confirm_password"
+      name="confirm_password"
+      placeholder="Confirm password"
+    />
+    <legend>Enter your detais here</legend>
+  </fieldset>
+  <div class="register_btn">
+    <button type="submit" value="Submit">Submit</button>
+  </div>
 </form>
- {% endblock %}
+{% endblock %}
