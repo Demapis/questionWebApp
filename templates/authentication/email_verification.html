@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Verification</title>
+</head>
+<body>
+    <h2>Hello {{ user.first_name }},</h2>
+    <p>Thank you for signing up! Please verify your email by clicking the link below:</p>
+    <a href="{{ verification_link }}" style="color: blue; font-weight: bold;">Verify Email</a>
+    <p>If you did not sign up, please ignore this email.</p>
+</body>
+</html>
